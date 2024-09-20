@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Person</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<h2>Edit Person</h2>
+<form method="POST" class="post-form" action="">
+    {% csrf_token %}
+    <div class="container">
+        {{ form.as_p }}  <!-- Renders the form with the person's data -->
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>
+</body>
+</html>
